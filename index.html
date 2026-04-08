@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+  <img class="bg" src="./assets/fullbackground.png" alt="">
+  <img class="songUI" src="./assets/songuibackground.png" alt="">
+
+  <img class="teapot" src="./assets/teapot.png" alt="">
+
+  <!-- PLANT FRAMES -->
+  <img class="plant plant1 active" src="./assets/plant 1.png" alt="">
+  <img class="plant plant2" src="./assets/plant 2.png" alt="">
+  <img class="plant plant3" src="./assets/plant 3.png" alt="">
+
+  <img class="croissant" src="./assets/croissants.png" alt="">
+  <img class="teacup" src="./assets/teacup.png" alt="">
+
+  <!-- STEAM FRAMES -->
+  <img class="steam steam1 active" src="./assets/steam 1.png" alt="">
+  <img class="steam steam2" src="./assets/steam 2.png" alt="">
+  <img class="steam steam3" src="./assets/steam 3.png" alt="">
+
+  <div class="songTitle" id="songTitle">Song Title</div>
+  <div class="artist" id="artist">Artist</div>
+
+  <div class="progressContainer" id="progressContainer">
+    <div class="progressBar" id="progressBar"></div>
+  </div>
+
+  <button class="playBtn" id="playBtn">
+    <img class="playIcon" src="./assets/play.png" alt="">
+    <img class="pauseIcon" src="./assets/pause.png" alt="">
+  </button>
+
+  <button class="backBtn" id="backBtn">
+    <img src="./assets/forward-back.png" alt="">
+  </button>
+
+  <button class="forwardBtn" id="forwardBtn">
+    <img class="flipX" src="./assets/forward-back.png" alt="">
+  </button>
+
+  <button id="minBtn">
+    <img src="./assets/minimize.png" alt="">
+  </button>
+
+  <button id="closeBtn">
+    <img src="./assets/close.png" alt="">
+  </button>
+
+  <audio id="audio"></audio>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

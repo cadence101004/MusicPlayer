@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:transparent;
+}
+
+/* container */
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:transparent;
+  overflow:hidden;
+}
+
+.app{
+  position:relative;
+  width:600px; /* match your Electron window better */
+}
+
+.bg{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:22px;
+}
+
+/* overlay UI */
+.songUI{
+  position:absolute;
+  top:52.5%;
+  left:10%;
+
+  width:82%;
+  height:auto;
+
+  pointer-events:none; /* so clicks pass through later */
+}
+
+.teapot{
+  position:absolute;
+  right:-12%;
+  bottom:39.2%;
+  width:52.5%;
+  height:auto;
+  z-index:11;
+  clip-path: inset(0 28% 0 0);
+}
+
+.plant{
+  position:absolute;
+  left:30.5%;
+  top:7.5%;
+  width:66%;
+  height:auto;
+  z-index:10;
+  opacity:0;
+}
+
+.plant2{
+  transform:translateX(12.5px) translateY(-5px);
+}
+
+.plant3{
+  transform:translateX(12.5px) translateY(-0.5px);
+}
+
+.plant.active{
+  opacity:1;
+}
+
+.croissant{
+  position:absolute;
+  left:-5.8%;
+  bottom:-9.9%;
+  width:50%;
+  height:auto;
+  z-index:12;
+}
+
+.teacup{
+  position:absolute;
+  right:-10.5%;
+  bottom:-8.5%;
+  width:48%;
+  height:auto;
+  z-index:13;
+}
+
+.steam{
+  position:absolute;
+  right:-17.5%;
+  bottom:-6.5%;
+  width:50%;
+  height:auto;
+  z-index:14;
+  pointer-events:none;
+  opacity:0;
+}
+
+.steam2{
+  width:25%;
+  transform:translateX(-85px) translateY(-100px);
+}
+
+.steam3{
+  width:25%;
+  transform:translateX(-70px) translateY(-100px);
+}
+
+.steam.active{
+  opacity:1;
+}
+
+/* general button reset */
+button{
+  position:absolute;
+  border:none;
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  z-index:20;
+}
+
+button img{
+  width:100%;
+  height:auto;
+  display:block;
+  pointer-events:none;
+}
+
+/* PLAY (center) */
+.playBtn{
+  left:51.3%;
+  bottom:12%;
+  transform:translateX(-50%);
+  width:25%;
+  aspect-ratio:1 / 1;
+}
+
+.playBtn .playIcon,
+.playBtn .pauseIcon{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.playBtn .pauseIcon{
+  opacity:0;
+}
+
+.playBtn.showPause .playIcon{
+  opacity:0;
+}
+
+.playBtn.showPause .pauseIcon{
+  opacity:1;
+}
+
+/* BACK */
+.backBtn{
+  left:64%;
+  bottom:12%;
+  width:25%;
+}
+
+/* FORWARD */
+.forwardBtn{
+  right:61.5%;
+  bottom:12%;
+  width:25%;
+}
+
+/* flip image */
+.flipX{
+  transform:scaleX(-1);
+}
+
+.songTitle{
+  position:absolute;
+  left:433px;
+  bottom:37.8%;
+  transform:translateX(-50%);
+
+  font-family:'Press Start 2P', monospace;
+  font-size:35px;
+  color:#f3efe5;
+
+  text-align:left;
+  z-index:100;
+  white-space: nowrap;
+  width:680px;
+}
+
+.artist{
+  position:absolute;
+  left:394px;
+  bottom:32%;
+  transform:translateX(-50%);
+
+  font-family:'Press Start 2P', monospace;
+  font-size:25px;
+  color:#efc692;
+
+  text-align:left;
+  z-index:100;
+  white-space: nowrap;
+  width:600px;
+}
+
+.progressContainer{
+  position:absolute;
+  left:51.1%;
+  bottom:27.6%; /* adjust to sit on your UI bar */
+  transform:translateX(-50%);
+
+  width:72%;
+  height:12px;
+
+  background:#fcecd8;
+  border-radius:999px;
+  overflow:hidden;
+  z-index:50;
+}
+
+.progressBar{
+  width:0%;
+  height:100%;
+  background:#a57973; /* aesthetic match */
+  border-radius:999px;
+}
+
+#minBtn{
+  position:absolute;
+  top:1%;
+  right:82%;
+  width:8%;
+  z-index:200;
+}
+
+#closeBtn{
+  position:absolute;
+  top:0.8%;
+  right:88%;
+  width:8.5%;
+  z-index:200;
+}
+
+#minBtn img,
+#closeBtn img{
+  width:100%;
+  height:auto;
+  display:block;
+  pointer-events:none;
+}
+
+/* IMPORTANT for Electron */
+#minBtn,
+#closeBtn{
+  -webkit-app-region: no-drag;
+}
+
+.app{
+  position:relative;
+  -webkit-app-region: drag;
+}
+
+button,
+#minBtn,
+#closeBtn,
+.playBtn,
+.backBtn,
+.forwardBtn,
+.progressContainer{
+  -webkit-app-region: no-drag;
+}
