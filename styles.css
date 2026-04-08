@@ -22,7 +22,7 @@ body{
 
 .app{
   position:relative;
-  width:600px; /* match your Electron window better */
+  width:600px; 
 }
 
 .bg{
@@ -119,7 +119,7 @@ body{
   opacity:1;
 }
 
-/* general button reset */
+/* button reset */
 button{
   position:absolute;
   border:none;
@@ -136,7 +136,7 @@ button img{
   pointer-events:none;
 }
 
-/* PLAY (center) */
+/* play */
 .playBtn{
   left:51.3%;
   bottom:12%;
@@ -167,14 +167,14 @@ button img{
   opacity:1;
 }
 
-/* BACK */
+/* back */
 .backBtn{
   left:64%;
   bottom:12%;
   width:25%;
 }
 
-/* FORWARD */
+/* forward */
 .forwardBtn{
   right:61.5%;
   bottom:12%;
@@ -221,7 +221,7 @@ button img{
 .progressContainer{
   position:absolute;
   left:51.1%;
-  bottom:27.6%; /* adjust to sit on your UI bar */
+  bottom:27.6%; 
   transform:translateX(-50%);
 
   width:72%;
@@ -236,7 +236,7 @@ button img{
 .progressBar{
   width:0%;
   height:100%;
-  background:#a57973; /* aesthetic match */
+  background:#a57973;
   border-radius:999px;
 }
 
@@ -264,7 +264,7 @@ button img{
   pointer-events:none;
 }
 
-/* IMPORTANT for Electron */
+/* electron (drag the window) */
 #minBtn,
 #closeBtn{
   -webkit-app-region: no-drag;

@@ -1,4 +1,4 @@
-// -------- STEAM ANIMATION --------
+// steam animation
 const steamFrames = document.querySelectorAll(".steam");
 let steamIndex = 0;
 
@@ -9,7 +9,7 @@ setInterval(() => {
 }, 700);
 
 
-// -------- PLANT ANIMATION --------
+// plant animation
 const plantFrames = document.querySelectorAll(".plant");
 let plantIndex = 0;
 
@@ -19,10 +19,10 @@ setInterval(() => {
   plantFrames[plantIndex].classList.add("active");
 }, 1000);
 
+// music player functionality
 const progressContainer = document.getElementById("progressContainer");
 const progressBar = document.getElementById("progressBar");
 
-// -------- MUSIC PLAYER --------
 const songs = [
   {
     title: "半點心",

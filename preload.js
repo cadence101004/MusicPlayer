@@ -1,3 +1,4 @@
+// close and minimize button functionality
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("api", {
