@@ -1,6 +1,6 @@
 # Desktop Music App
 
-This is a pixel-style desktop music player that I designed and built from scratch. The goal of this project was to create something that feels like a comfy, interactive widget sitting on your desktop instead of just another basic music player.
+This is a pixel-style desktop music player that I designed and built from scratch. The goal of this project was to create something that feels like a comfy, interactive widget sitting on your desktop instead of just another basic music player. (It's meant to be a desktop app, but if you don't want to use Electron, you can view the app and its functionality here: https://cadence101004.github.io/MusicPlayer/)
 
 ## Design
 
